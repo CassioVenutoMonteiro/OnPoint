@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #2D2D2D;
+}
+
+header {
+    background-color: #000;
+    height: 10vh;
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 2px 8px 3px 1px rgba(0, 0, 0, 25%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #8C52FF;
+}
+
+.logo img {
+    width: 10vh;
+    margin-top: 10px;
+}
+
+li {
+    display: inline-block;
+    margin-left: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.item:hover {
+    background-image: linear-gradient(270deg, #8C52FF 4.77%, rgba(255, 222, 89, 0.95) 66.15%);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+}
+
+.dropbtn {
+    border-radius: 10px;
+    color: #8C52FF;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+}
+  
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #FFF;
+}
+  
+.dropdown-content a:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+.show {
+    display: block;
+}
+
+.menu-bars {
+    cursor: pointer;
+    visibility: hidden;
+    position: absolute;
+}
+
+.menu-bars svg {
+    fill: #8C52FF;
+}
+
+.action {
+    visibility: visible;
+    position: relative;
+}
+
+.nav-bar {
+    visibility: visible;
+    position: relative;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container-login {
+    width: 500px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #000;
+    box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.25);
+    padding: 3%;
+}
+
+.nomeCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 36px;
+    color: #FFDE59;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+.formLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-input {
+    margin-bottom: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.container-input label {
+    color: #FFDE59;
+    font-weight: bold;
+}
+
+.container-input input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px #8C52FF;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10px;
+    color: #FFF;
+}
+
+.forgotPass {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.aItems {
+    color: white;
+    text-decoration: none;
+}
+
+.aItems:hover {
+    text-decoration: underline;
+}
+
+.container-input button {
+    width: 300px;
+    height: 70px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #8C52FF 21.03%, rgba(255, 204, 0, 0.95) 99.94%);
+    border: none;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.button-alinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lnr-eye {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.cadastro-icon {
+    right: 60px;
+}
+
+.container-cadastro {
+    width: 1200px;
+    height: 675px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #000;
+    box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.25);
+    padding: 3%;
+    margin-top: 100px;
+}
+
+.formCadastro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-input-cadastro  {
+    margin-bottom: 50px;
+    width: 50%;
+    position: relative;
+    color: #FFDE59;
+    font-weight: bold;
+}
+
+.radios {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+}
+
+.label {
+    margin-left: 10px;
+}
+
+.container-radios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    color: #FFDE59;
+    font-weight: bold;
+}
+
+.container-radios label {
+    font-size: 20px;
+}
+
+.itemRadio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.itemRadio {
+    display: flex;
+}
+
+.itemRadio label {
+    width: 150px;
+}
+
+.container-input-cadastro input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px #8C52FF;
+    font-size: 20px;
+    font-weight: 400;
+    width: 90%;
+    margin-top: 10px;
+    color: #FFF;
+}
+
+.button-alinha-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-cadastro {
+        width: 100%;
+        height: 90vh;
+        margin-top: 50vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .action {
+        visibility: hidden;
+        position: absolute;
+    }
+    
+    .nav-bar {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .menu-bars {
+        visibility: visible;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .formCadastro {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-input-cadastro input {
+        width: 100%;
+    }
+
+    .container-input-cadastro {
+        width: 90%;
+    }
+
+    .cadastro-icon {
+        right: 10px;
+    }
+
+    .container-cadastro {
+        margin-top: 30vh;
+    }
+
+    .nomeCard {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container-login {
+        width: 100%;
+    }
+
+    .container-radios {
+        width: 90%;
+    }
+
+    .container-radios label {
+        font-size: 16px;
+    }
+
+    .fontLow {
+        font-size: 28px;
+    }
+
+    .radios {
+        width: 100%;
+    }
+}
