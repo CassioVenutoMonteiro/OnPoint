@@ -14,6 +14,7 @@
         public function setEmail($email){$this->email = $email;}
         public function setArquivo($arquivo){$this->arquivo = $arquivo;}
 
+        public function getIdUsuario(){return $this->idUsuario;}
         public function getNome(){return $this->nome;}
         public function getSenha(){return $this->senha;}
         public function getEmail(){return $this->email;}
