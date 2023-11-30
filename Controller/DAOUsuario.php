@@ -25,5 +25,20 @@
             $stmt->bindValue(4,$u -> getArquivo());
             $stmt->bindValue(5,$u -> getIdUsuario());
         }
+
+        public function Find($id){
+            $sql = "SELECT * FROM usuario where = :id";
+            $stmt = FabricaConexao::Conexao()->prepare($sql);
+            $stmt->bindParam(':id', $id,PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetch();
+        }
+
+        public function Delete($id){
+            $sql = "DELETE FROM usuarios WHERE idUsuario = :id";
+            $stmt = FabricaConexao::Conexao()->prepare($sql);
+            $stmt->execute();
+            header('Location: ../View/Home');
+        }
     }
 ?>
