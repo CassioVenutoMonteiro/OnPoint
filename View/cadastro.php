@@ -13,9 +13,9 @@
     <!-- Biblioteca de Icons - Linear Icons -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Título -->
-    <title>OnPoint - Home</title>
+    <title>OnPoint - Home</title>q
 </head>
 <body>
     <header>
