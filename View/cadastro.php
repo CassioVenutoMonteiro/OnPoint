@@ -13,7 +13,7 @@
     <!-- Biblioteca de Icons - Linear Icons -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="main.cs">
+    <link rel="stylesheet" href="../Assets/css/main.css">
     <!-- Título -->
     <title>OnPoint - Home</title>
 </head>
