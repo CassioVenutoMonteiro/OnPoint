@@ -1,3 +1,19 @@
+<?php
+
+header('Content-Type: text/html; charset=utf-8')
+session_start();
+
+include_once "../model/usuario.php";
+include_once "../controller/DAOUsuario.php";
+
+$usuarioDAO = new DAOUsuario();
+$usuario = new usuario();
+
+if(isset($_POST['cadastrar'])){
+    $usuario->setNome($_POST['nome']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
