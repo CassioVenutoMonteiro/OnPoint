@@ -15,7 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Título -->
-    <title>OnPoint - Home</title>q
+    <title>OnPoint - Home</title>
 </head>
 <body>
     <header>
