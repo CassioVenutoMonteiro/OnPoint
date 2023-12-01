@@ -13,7 +13,7 @@
     <!-- Biblioteca de Icons - Linear Icons -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../Assets/css/main.css">
     <!-- Título -->
     <title>OnPoint - Home</title>
 </head>
@@ -53,7 +53,8 @@
                 L O G I N
                 <hr color="#8C52FF" width="70%">
             </div>
-            <form class="formLogin" action="" method="post">
+            <!-- FORMULARIO -->
+            <form class="formLogin" action="../Controller/logar.php" method="post">
                 <div class="container-input">
                     <label for="email">E-mail:</label><br>
                     <input type="email" name="email" id="email" placeholder="you@example.com" required>

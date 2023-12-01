@@ -10,6 +10,8 @@ senha varchar(25) not null,
 arquivo varchar(50)
 )engine=innodb;
 
+select * from usuario;
+
 create table empresa(
 id_empresa int unsigned auto_increment not null primary key,
 nome varchar(30) not null,
@@ -62,6 +64,23 @@ usuario_ajudante_fk int unsigned not null,
 foreign key (usuario_ajudado_fk) references usuario(id_usuario),
 foreign key (usuario_ajudante_fk) references usuario(id_usuario)
 )engine=innodb;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 delimiter //
 create procedure insUsuario(in _nome varchar(40), in _email varchar(30), in _senha varchar(25))
 begin
@@ -89,7 +108,7 @@ begin
 		end if;
 end //
 delimiter ;
-
+*/
 
 
 

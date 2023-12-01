@@ -8,8 +8,8 @@
             $sql = "INSERT INTO usuario VALUES(NULL,?,?,?,?)";
             $stmt = FabricaConexao::Conexao()->prepare($sql);
             $stmt->bindValue(1,$u -> getNome());
-            $stmt->bindValue(2,$u -> getSenha());
-            $stmt->bindValue(3,$u -> getEmail());
+            $stmt->bindValue(2,$u -> getEmail());
+            $stmt->bindValue(3,$u -> getSenha());
             $stmt->bindValue(4,$u -> getArquivo());
             $stmt->execute();
             header('Location: ../View/Login');
