@@ -1,6 +1,6 @@
 <?php
 
-    define('HOST','mysql:host=localhost;dbname=onpoint;charset=utf8');
+    define('HOST','mysql:host=localhost;dbname=OnPoint;charset=utf8');
     define('USER','root');
     define('PASSWORD','');
 

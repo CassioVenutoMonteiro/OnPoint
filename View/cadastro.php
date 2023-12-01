@@ -1,16 +1,20 @@
 <?php
 
-header('Content-Type: text/html; charset=utf-8')
+header('Content-Type: text/html; charset=utf-8');
 session_start();
 
-include_once "../model/usuario.php";
-include_once "../controller/DAOUsuario.php";
+include_once "../Model/usuario.php";
+include_once "../Controller/DAOUsuario.php";
 
 $usuarioDAO = new DAOUsuario();
 $usuario = new usuario();
 
-if(isset($_POST['cadastrar'])){
-    $usuario->setNome($_POST['nome']);
+if(isset($_POST['entrar'])){
+    $usuario->setNome($_POST['nomeUsuario']);
+    $usuario->setEmail($_POST['email']);
+    $usuario->setSenha($_POST['senha']);
+
+    $usuarioDAO->Insert($usuario);
 }
 ?>
 
@@ -69,6 +73,7 @@ if(isset($_POST['cadastrar'])){
                 C A D A S T R E - S E
                 <hr color="#8C52FF" width="70%">
             </div>
+            <!-- FORMULARIO -->
             <form class="formCadastro" action="" method="post">
                 <div class="container-input-cadastro">
                     <label for="nomeUsuario">Nome de Usuário</label><br>
