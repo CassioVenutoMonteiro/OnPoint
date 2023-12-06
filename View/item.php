@@ -1,8 +1,3 @@
-<?php
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="./item.php">gerenciar roupas</a>
+    <a href="addItem.php">adicionar item</a>
+visualizar itens:
+
 </body>
 </html>

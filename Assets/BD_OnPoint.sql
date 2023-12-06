@@ -19,11 +19,9 @@ email varchar(30) not null,
 senha varchar(25) not null
 )engine=innodb;
 
-create table roupa(
-id_roupa int unsigned auto_increment not null primary key,
+create table itens(
+id_itens int unsigned auto_increment not null primary key,
 nome varchar(40) not null,
-dt date not null,
-descricao varchar(100) not null,
 tipo varchar(25),
 evento varchar(25),
 cor varchar(25),
@@ -42,13 +40,13 @@ usuario_fk int unsigned not null,
 foreign key (usuario_fk) references usuario(id_usuario)
 )engine=innodb;
 
-create table look_roupa(
+create table look_itens(
 id_usuario_fk int unsigned not null,
-id_roupa_fk int unsigned not null,
+id_itens_fk int unsigned not null,
 id_look_fk int unsigned not null,
-primary key (id_usuario_fk,id_roupa_fk,id_look_fk),
+primary key (id_usuario_fk,id_itens_fk,id_look_fk),
 foreign key (id_usuario_fk) references usuario(id_usuario),
-foreign key (id_roupa_fk) references roupa(id_roupa),
+foreign key (id_itens_fk) references itens(id_itens),
 foreign key (id_look_fk) references look(id_look)
 )engine=innodb;
 
