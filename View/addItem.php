@@ -18,7 +18,7 @@
         <label for="cor">Cor:</label>
         <input type="text" name="cor" id="cor">
         <label for="img">Imagem:</label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
         <input type="file" name="img" id="img">
         <input type="submit" name="add" value="adicionar">
     </form>
@@ -26,19 +26,33 @@
 
 </html>
 <?php
-try {
+
+    if(isset($_GET['msg'])){
+        echo $_GET['msg'];
+    }
+
+    include_once "../Model/item.php";
+    include_once "../Controller/DAOItem.php";
+
+    $itemDAO = new DAOItem();
+    $item = new Item();
+    session_start();
     if (isset($_POST['add'])) {
-        // var_dump($_FILES['img']['name']);
         $uploaddir = "../Assets/img/";
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);
         if (move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile)){
+            var_dump($_SESSION["id"]);
+            $item->setNome($_POST['nome']);
+            $item->setTipo($_POST['tipo']);
+            $item->setEvento($_POST['evento']);
+            $item->setCor($_POST['cor']);
+            $item->setArquivo($uploadfile);
+            $item->setUsuario($_SESSION["id"]);
+            $itemDAO->Insert($item);
             echo "arquivo enviado com sucesso!!";
         }else{
-            echo "Ups! Algo deu errado.";
+            echo "Ups! Algo deu errado.<br>";
         }
-        print_r($uploadfile);
     }
-} catch (Exception $e) {
-    echo $e->getMessage();
-}
+
 ?>

@@ -16,7 +16,8 @@ if(isset($_POST['email']) && ($_POST['senha'])){
         session_start();
         $usuario = $stmt->fetchAll(PDO::FETCH_CLASS);
         $_SESSION["nome"] = $usuario[0]->nome;
-        // var_dump($usuario[0]->nome);
+        $_SESSION["id"] = $usuario[0]->id_usuario;
+        // var_dump($usuario[0]->id_usuario);
         header("Location: ../View/home.php");
     }
     else{
