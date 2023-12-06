@@ -36,7 +36,9 @@
 
     $itemDAO = new DAOItem();
     $item = new Item();
+
     session_start();
+    
     if (isset($_POST['add'])) {
         $uploaddir = "../Assets/img/";
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);

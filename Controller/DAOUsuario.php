@@ -16,7 +16,7 @@
         }
 
         public function Update(Usuario $u){
-            $sql = 'UPDATE usuarios SET nome=?, senha=?, email=?, arquivo=? WHERE idUsuario = ?';
+            $sql = 'UPDATE usuarios SET nome=?, senha=?, email=?, arquivo=? WHERE id_usuario= ?';
             $stmt = FabricaConexao::Conexao()->prepare($sql);
 
             $stmt->bindValue(1,$u -> getNome());
@@ -35,10 +35,11 @@
         }
 
         public function Delete($id){
-            $sql = "DELETE FROM usuarios WHERE idUsuario = :id";
+            $sql = "DELETE FROM usuarios WHERE id_usuario = :id";
             $stmt = FabricaConexao::Conexao()->prepare($sql);
+            $stmt->bindParam(':id',$id,PDO::PARAM_INT);
             $stmt->execute();
-            header('Location: ../View/Home');
+            header('Location: ../View/login.php');
         }
     }
 ?>
